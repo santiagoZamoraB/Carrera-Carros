@@ -16,13 +16,18 @@ function setup(){
   createCanvas(displayWidth-50, displayHeight-100);
   database = firebase.database();
   console.log(database);
-  form = new Form();
+  game = new Game();
+  game.getState();
+  game.start();
   
+  
+
 }
 
 function draw(){
   
-  form.display();
+  //form.display();
+  console.log(gameState);
    
   drawSprite();
 }

@@ -16,7 +16,12 @@ class Form{
       this.playButton.mousePressed(()=>{
         this.inputN.hide();
         this.playButton.hide();
-        this.greetings.html("hola bienvenido "+ this.inputN.value());
+        player.name = this.inputN.value();
+        playerCount += 1
+        player.index = playerCount;
+        player.updateCount(playerCount);
+        player.update();
+        this.greetings.html("hola bienvenido "+ player.name);
         this. greetings.position(displayWidth/2-100,displayHeight /3 )
         this. rButton.position(displayWidth/ 2 + 740,displayHeight / 10 - 80);
       })
