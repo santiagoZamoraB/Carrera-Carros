@@ -7,6 +7,10 @@ class Form{
       this. rButton = createButton("Reinicio");
 
     }
+      hide(){
+       this.greetings.hide();
+
+      }
     display(){
       this.title.html('car racing');
       this.title.position(displayWidth/2- 20,displayHeight/4);
@@ -33,4 +37,5 @@ class Form{
       })
 
     }
+
 }

@@ -29,7 +29,11 @@ class Game{
        }
     }
     play(){
-        
+        form.hide();
+        textSize(25);
+        text("Arranca",400,200);
     }
-    
+    end(){
+
+    }
 }
