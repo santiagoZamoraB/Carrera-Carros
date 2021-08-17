@@ -10,7 +10,8 @@ class Player{
     update(){
       var playerIndex = 'players/player' + this.index;
       database.ref(playerIndex).set({
-        name: this.name
+        name: this.name,
+        distance: this.distance
 
       })
     }
@@ -24,6 +25,13 @@ class Player{
       database.ref('/').update({
           playerCount:count
       })
-
+   
+    }
+    static getPlayerInfo(){
+      console.log("hola");
+      var playerInfoRef = database.ref('players');
+      playerInfoRef.on('value',(data)=>{
+        allPlayers = data.val();
+      })
     }
 }
