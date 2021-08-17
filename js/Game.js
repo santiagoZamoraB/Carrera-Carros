@@ -27,11 +27,21 @@ class Game{
            form = new Form();
            form.display();
        }
+         car1 = createSprite(410,700, 20, 20);
+         car1.addImage(car1Image);
+         car2 = createSprite(550,700, 20, 20);
+         car2.addImage(car2Image);
+         cars = [car1, car2];
+         //car3 = createSprite(610,700,20,20);
+         
+         //car4 = createSprite(750,700,20,20);
     }
     play(){
         form.hide();
         textSize(25);
         text("Arranca",400,200);
+        background("black");
+        image(pistaI,0,-displayHeight * 3, displayWidth,displayHeight * 10);
     }
     end(){
 
