@@ -32,6 +32,8 @@ class Game{
          car2 = createSprite(550,700, 20, 20);
          car2.addImage(car2Image);
          cars = [car1, car2];
+         car1.visible = false;
+         car2.visible=  false;
          //car3 = createSprite(610,700,20,20);
          
          //car4 = createSprite(750,700,20,20);
@@ -46,16 +48,18 @@ class Game{
           var displayPos = 150;
           background("black");
           image(pistaI,0,-displayHeight * 3, displayWidth,displayHeight * 10);
+          car1.visible = true;
+          car2.visible = true;
           var index = 0;
-          var x = 195; 
+          var x = 300; 
           var y;
           for(var plr in allPlayers){
             index += 1;
             x +=225;
             y = displayHeight - allPlayers[plr].distance;
-            console.log(plr.distance);
-            //cars[index - 1].x = x;
-           // cars[index - 1].y = y;
+            //console.log(plr.distance);
+            cars[index - 1].x = x;
+            cars[index - 1].y = y;
            if(index === player.index){
              camera. position.x = displayWidth/2;
              camera. position.y = cars[index - 1].y;
