@@ -43,5 +43,5 @@ function draw(){
     game.play();
   } 
 
-  drawSprite();
+  drawSprites();
 }

@@ -47,18 +47,19 @@ class Game{
           background("black");
           image(pistaI,0,-displayHeight * 3, displayWidth,displayHeight * 10);
           var index = 0;
-          cars[0].shapeColor ="red";
-          cars[0].scale = 5;
           var x = 195; 
           var y;
           for(var plr in allPlayers){
-            /*index += 1;
+            index += 1;
             x +=225;
             y = displayHeight - allPlayers[plr].distance;
             console.log(plr.distance);
-            cars[index - 1].x = x;
-            cars[index - 1].y = y;
-            */                              
+            //cars[index - 1].x = x;
+           // cars[index - 1].y = y;
+           if(index === player.index){
+             camera. position.x = displayWidth/2;
+             camera. position.y = cars[index - 1].y;
+           }                               
           }
         }
         if(keyIsDown(UP_ARROW)){
