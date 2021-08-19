@@ -29,6 +29,7 @@ class Form{
         player.updateCount(playerCount);
         player.update();
         this.greetings.html("hola bienvenido "+ player.name);
+        console.log("ete es el index" + player.index);
         this. greetings.position(displayWidth/2-100,displayHeight /3 )
         this. rButton.position(displayWidth/ 2 + 740,displayHeight / 10 - 80);
       })

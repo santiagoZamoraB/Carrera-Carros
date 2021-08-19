@@ -22,13 +22,15 @@ class Player{
       })
     }
     updateCount(count){
+      console.log("Este es el count"+count);
       database.ref('/').update({
           playerCount:count
+          
       })
    
     }
     static getPlayerInfo(){
-      console.log("hola");
+      //console.log("hola");
       var playerInfoRef = database.ref('players');
       playerInfoRef.on('value',(data)=>{
         allPlayers = data.val();

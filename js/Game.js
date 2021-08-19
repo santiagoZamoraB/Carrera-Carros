@@ -44,7 +44,7 @@ class Game{
         text("Arranca",400,200);
         Player.getPlayerInfo();
         if(allPlayers != undefined){
-          console.log(cars[0].y);
+          //console.log(cars[0].y);
           var displayPos = 150;
           background("black");
           image(pistaI,0,-displayHeight * 3, displayWidth,displayHeight * 10);

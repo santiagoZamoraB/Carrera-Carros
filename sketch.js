@@ -20,10 +20,11 @@ function preload(){
 function setup(){
   createCanvas(displayWidth-50, displayHeight-100);
   database = firebase.database();
-  console.log(database);
+  //console.log(database);
   game = new Game();
   game.getState();
   game.start();
+  
   
   
 
@@ -31,11 +32,12 @@ function setup(){
 
 function draw(){
   
+  console.log("ete es le playerCount"+playerCount);
+    
   //form.display();
-  console.log(gameState);
+ // console.log(gameState);
   if(playerCount === 2){
     game.updateState(1);
-    
     
   }
   if(gameState === 1){
