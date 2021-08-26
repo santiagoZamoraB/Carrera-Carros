@@ -7,6 +7,7 @@ var playerCount = 0;
 var car1, car1Image, car2, car2Image, car3,car3Imagem, car4, car4Image;
 var pista, pistaI;
 var cars = [] 
+var playerM = 0;
 
 function preload(){
  car1Image = loadImage("../images/car1.png");
@@ -35,7 +36,7 @@ function draw(){
   console.log("ete es le playerCount"+playerCount);
     
   //form.display();
- // console.log(gameState);
+  
   if(playerCount === 2){
     game.updateState(1);
     
@@ -44,6 +45,8 @@ function draw(){
     clear();
     game.play();
   } 
+
+  
 
   drawSprites();
 }

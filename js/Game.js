@@ -10,9 +10,21 @@ class Game{
 
       })
     }
+    getPlayerM(){
+      var playerMRef = database.ref('playerM');
+      playerMRef.on('value',function(data){
+        playerM = data.val();
+      })
+
+    }
     updateState(state){
       database.ref('/').update({
           gameState:state
+      })
+    }
+     updatePlayerM(M){
+        database.ref('/').update({
+        playerM:M
       })
     }
     async start(){
@@ -69,10 +81,17 @@ class Game{
            }                               
           }
         }
-        if(keyIsDown(UP_ARROW)){
+        //playerM === 1 no avanza XD
+        if(keyIsDown(UP_ARROW) && player.distance < 4000 && playerM === 0){
           player.distance += 50;
           player.update();
+          playerM = this.getPlayerM();
         }
+        else{
+          console.log(player.name);
+          this.updatePlayerM(1);
+        }
+
         
     }
     end(){
